@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Mvcshubham.Models.Location>
+@{
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+            location
+        </th>
+        <th>
+            Detail
+        </th>
+    </tr>
+    @foreach (var location in Model)
+    {
+        <tr>
+            <td>
+                <a asp-action="CustmerList" asp-controller="Customer" asp-route-Id="@location.Id " > @location.Place</a>
+
+            </td>
+            <td>
+                @location.Details
+            </td>
+        </tr>
+    }
+
+</table>
